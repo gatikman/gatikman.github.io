@@ -1,5 +1,5 @@
-# Fullstack Software Developer 
-## Specialized in algorithmic trading
+## Fullstack Software Developer 
+### Specialized in algorithmic trading
 
 #### Technical skills: Python, ReactJS, NextJS, Javascript, SQL, AWS 
 
