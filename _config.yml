@@ -1,4 +1,6 @@
 title: gatikman
+description: Welcome to my personal website, dedicated to my projects and interests
 logo: assets/photo.png
 show_downloads: false
+google_analytics: G-2ZYEFWTEWZ
 theme: jekyll-theme-minimal
