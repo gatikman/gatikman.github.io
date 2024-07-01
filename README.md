@@ -1,4 +1,5 @@
-## Fullstack Software Developer 
+
+## SaaS Entrepreneur & Algorithmic Trading & Software Developer 
 
 ### Specialized in algorithmic trading
 
