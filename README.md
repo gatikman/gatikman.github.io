@@ -1,11 +1,18 @@
-# Fullstack software developer specialized in algorithmic trading
+# Fullstack Software Developer 
+## Specialized in algorithmic trading
+
+#### Technical skills: Python, ReactJS, NextJS, Javascript, SQL, AWS 
 
 ### Education 
-Interaction design, Cand.merc.(it.) / MSc. in Business
+- Cand.merc.(it.) / MSc. in Business
+- BA Interaction design
 
 ### Work Experience
-Senior Frontend Developer @ Cardlay
-- Project 1
+**Algorithmic Trading Python (_Jan 2024 - Present_)**
+- Developing and automating trading strategies
+
+**Senior Frontend Developer @ Cardlay (_Mar 2020 - Jul 2023_)**
+- Responsable for frontend tasks, test automation task and occasionally backend across different web products from Cardlay
 
 ### Projects
-Algorithmic trading
+- Algorithmic trading strategies
