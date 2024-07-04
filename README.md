@@ -1,5 +1,5 @@
 
-## 
+#
 
 ## SaaS Entrepreneur & Algorithmic Trading & Software Developer 
 
@@ -26,4 +26,3 @@
 
 ### Projects
 - Algorithmic trading strategies
-- StudyHost [App](https://www.studyhost.app)
