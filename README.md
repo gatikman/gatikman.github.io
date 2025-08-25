@@ -1,28 +1,67 @@
+# Alejandro Gatica
 
-#
+## SaaS Entrepreneur · Algorithmic Trading Expert · Software Developer
 
-## SaaS Entrepreneur & Algorithmic Trading & Software Developer 
+---
 
-### Specialized in algorithmic trading
+###  Profile
+I'm an accomplished software developer with a strong blend of entrepreneurship, systems architecture, and algorithmic trading. I craft high-performance trading systems, lead technical operations, and architect robust SaaS products—particularly in sports broadcasting and financial markets.
 
-#### Technical skills: Python, Algorithmic Trading, ReactJS, NextJS, Javascript, SQL, AWS 
+---
 
-### Education 
-- Cand.merc.(it.) / MSc. in Business, Copenhagen Business School
-- BA Interaction design, Universidad Iberoamericana
+###  Technical Skills
+- **Languages & Frameworks:** Python, JavaScript, ReactJS, Next.js, Vite, fastify  
+- **Databases & Services:** SQL / AWS  
+- **Specialties:** Frontend & Full-Stack SaaS Development · Algorithmic Trading · Trading System Architecture
 
-### Work Experience
-**Algorithmic Trading Python @ Own Business - France (_Jan 2024 - Present_)**
-- Developing trading automation strategies, algorithms, Stocks, Crypto, FX and CFDs
+---
 
-**Senior Frontend Developer & Team Lead @ Cardlay - Copenhagen (_Mar 2020 - Jul 2023_)**
-- During my time in Cardlay I was team lead as well as responsible for contributing to the frontend projects, test automation task and occasionally backend across different web products from Cardlay.
+###  Education
+- **MSc in Business (Cand.merc.(IT))** — Copenhagen Business School | Copenhagen
+- **BA in Interaction Design** — Universidad Iberoamericana | Mexico City
 
-**Senior Developer @ Reviso - Copenhagen (_Apr 2016 - Feb 20203_)**
-- Responsible of the architecture, operations and development of all the product websites under reviso.com and non-related to the app. 
+---
 
-**Senior Developer @ Kamikaze Lab - Mexico City (_Apr 2016 - Feb 20203_)**
-- As a Senior Developer I participated in dozens of projects from the business requirements to the software implementation and maintenance.
+###  Professional Experience
 
-### Projects
-- Algorithmic trading strategies
+#### **Technical Co-founder** · Digital Arena — France  
+_Jun 2025 – Present_  
+- Spearhead full-stack development and daily operations of a live sports broadcasting platform, fully integrated with FinishLynx.  
+- Built using ReactJS, Vite, and fastify.  
+- Lead all technical architecture, deployment, and system maintenance.
+
+#### **Algorithmic Trading Developer (Own Project)** AlgoTrade — France  
+_Jan 2024 – Present_  
+- Designed and implemented a proprietary trading backbone from scratch.  
+- Automated market scanning (stocks, crypto, FX, indices, CFDs), backtesting, signal detection, order execution, and reporting.
+
+#### **Senior Frontend Developer & Team Lead** · Cardlay — Copenhagen  
+_Mar 2020 – Jul 2023_  
+- Led frontend development and a cross-functional team.  
+- Contributed to test automation and occasionally backend modules across several web products.
+
+#### **Senior Developer** · Reviso — Copenhagen  
+_Apr 2016 – Feb 2023_  
+- Architected, operated, and maintained all web-based product sites under reviso.com (non-app parts of the product ecosystem).
+
+#### **Senior Developer** · Kamikaze Lab — Mexico City  
+_Apr 2016 – Feb 2023_  
+- Worked end-to-end across numerous client-focused projects—from requirements gathering through implementation and maintenance.
+
+---
+
+### Languages
+- **Spanish:** Native
+- **English:** Full Professional Proficiency (C1)
+- **Danish:** Limited Working Proficiency (B2)
+- **French:** Professional Working Proficiency (B1)
+- **Czech:** Limited Working Proficiency (B1)
+
+###  Projects
+- **Algorithmic Trading Strategies**: Developed and deployed automated trading strategies with live execution and reporting capabilities.
+
+---
+
+###  Contact
+- **Location:** Strasbourg, France (currently)  
+- **Email / Website / LinkedIn:** [(gatikman.com)](https://gatikman.com/) [(email)](mailto:gatikman@gmail.com) [(linkedin)](https://www.linkedin.com/in/alejandro-gatica/)
