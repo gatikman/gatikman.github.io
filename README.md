@@ -1,5 +1,3 @@
-# Alejandro Gatica
-
 ## SaaS Entrepreneur · Algorithmic Trading Expert · Software Developer
 
 ---
@@ -17,8 +15,8 @@ I'm an accomplished software developer with a strong blend of entrepreneurship, 
 ---
 
 ###  Education
-- **MSc in Business (Cand.merc.(IT))** — Copenhagen Business School | Copenhagen
-- **BA in Interaction Design** — Universidad Iberoamericana | Mexico City
+- **MSc in Business (Cand.merc.(IT))** — Copenhagen Business School, Copenhagen
+- **BA in Interaction Design** — Universidad Iberoamericana, Mexico City
 
 ---
 
@@ -53,8 +51,8 @@ _Apr 2016 – Feb 2023_
 ### Languages
 - **Spanish:** Native
 - **English:** Full Professional Proficiency (C1)
-- **Danish:** Limited Working Proficiency (B2)
-- **French:** Professional Working Proficiency (B1)
+- **Danish:** Professional Working Proficiency (B2)
+- **French:** Limited Working Proficiency (B1)
 - **Czech:** Limited Working Proficiency (B1)
 
 ###  Projects
