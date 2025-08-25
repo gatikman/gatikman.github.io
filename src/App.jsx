@@ -7,6 +7,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import NotFound from './components/NotFound';
 
 // Global styles for accessibility and modern look
 const GlobalStyle = createGlobalStyle`
@@ -237,6 +238,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Main>
     </Router>
