@@ -155,7 +155,7 @@ export default function Resume() {
         <Title id="resume-title">Resume</Title>
         <Subtitle>Experience, projects, languages, and contact details.</Subtitle>
         <Actions>
-          <Button onClick={handlePrint} aria-label="Download resume as PDF">
+          <Button as="a" href="/files/resume.pdf" download aria-label="Download resume as PDF">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10v-4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M12 14V4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M9 11l3 3 3-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><rect x="4" y="14" width="16" height="6" rx="2" stroke="currentColor" strokeWidth="1.6"/></svg>
             Download PDF
           </Button>

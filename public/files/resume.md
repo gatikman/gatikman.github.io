@@ -6,7 +6,7 @@ Strong background in building scalable, responsive, and user-friendly web applic
 
 ### Professional Experience
 
-#### **Technical Co-founder · Frontend & Full-Stack Developer** · Digital Arena — France  
+#### **Technical Co-founder · Frontend & Full-Stack Developer** · Digital Arena - France  
 _Jun 2025 – Present_  
 - Lead frontend and full-stack development of a **live sports results SaaS platform**.  
 - Built responsive, reusable UI components with **React, TypeScript, Vite**, integrated with fastify backend.  
@@ -14,26 +14,26 @@ _Jun 2025 – Present_
 - Designed scalable architecture, deployment pipelines, and CI/CD workflows.  
 - Collaborated in an agile environment with cross-functional stakeholders and sports federations.  
 
-#### **Algorithmic Trading Developer (Independent Project)** · AlgoTrade — France  
+#### **Algorithmic Trading Developer (Independent Project)** · AlgoTrade - France  
 _Jan 2024 – Present_  
 - Developed a complete **trading system backend** for detection of signals, reports, and optimization.  
 - Created a custom performance monitoring module with own logging and analytics.  
 - Applied strong problem-solving, data visualization, and system design skills.  
 
-#### **Senior Frontend Developer & Team Lead** · Cardlay — Copenhagen  
+#### **Senior Frontend Developer & Team Lead** · Cardlay - Copenhagen  
 _Mar 2020 – Jul 2023_  
 - Led a **frontend development team** delivering enterprise financial SaaS products.  
 - Implemented **React + TypeScript UI components**, ensuring accessibility, reusability, and responsiveness.  
 - Integrated frontend workflows with **Git, JIRA, Confluence**, contributing to agile ceremonies and sprint planning.  
 - Coordinated with international stakeholders across Europe.  
 
-#### **Senior Developer** · Reviso — Copenhagen  
+#### **Senior Developer** · Reviso - Copenhagen  
 _Apr 2016 – Feb 2023_  
 - Designed and maintained **frontend web platforms** serving thousands of accounting SaaS users.  
 - Migrated legacy UI to **React/TypeScript**, introducing modular, reusable components.  
 - Ensured consistent user experience and performance optimization.  
 
-#### **Senior Developer** · Kamikaze Lab — Mexico City  
+#### **Senior Developer** · Kamikaze Lab - Mexico City  
 _Apr 2016 – Feb 2023_  
 - Delivered multiple **client-facing web applications** using modern frontend frameworks.  
 - Engaged directly with international clients to gather requirements and implement responsive UIs.  

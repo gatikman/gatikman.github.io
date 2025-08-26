@@ -41,6 +41,75 @@ async function main() {
 
   const photoFileUrl = new URL(`file://${photoPath}`);
 
+  // Parse Technical Skills section into structured data
+  function parseSkills(markdown) {
+    const lines = markdown.split(/\r?\n/);
+    const startIdx = lines.findIndex((l) => l.trim().toLowerCase().startsWith('### technical skills'));
+    if (startIdx === -1) return [];
+    // capture until next ### heading or end
+    let i = startIdx + 1;
+    const section = [];
+    while (i < lines.length) {
+      const line = lines[i];
+      if (/^###\s+/i.test(line)) break;
+      if (line.trim()) section.push(line.trim());
+      i++;
+    }
+
+    // Helper to split by commas outside parentheses
+    const splitSmart = (s) => {
+      const out = []; let buf = ''; let depth = 0;
+      for (const ch of s) {
+        if (ch === '(') depth++;
+        if (ch === ')') depth = Math.max(0, depth - 1);
+        if (ch === ',' && depth === 0) { out.push(buf.trim()); buf = ''; }
+        else { buf += ch; }
+      }
+      if (buf.trim()) out.push(buf.trim());
+      return out;
+    };
+
+    const skills = [];
+    for (const l of section) {
+      const m = /^-\s*\*\*(.+?)\*\*:?\s*(.+)?$/.exec(l);
+      if (!m) continue;
+      const labelRaw = m[1].trim();
+      const itemsRaw = (m[2] || '').trim();
+      if (!itemsRaw) { skills.push({ label: labelRaw, items: [] }); continue; }
+
+      const tokens = splitSmart(itemsRaw);
+      const items = [];
+      for (let t of tokens) {
+        t = t.trim().replace(/^[-–•]\s*/, '');
+        // Expand patterns like "Node.js (Fastify)" or "Unit Testing (Jest, React Testing Library)"
+        const pm = /^(.*?)\s*\((.+)\)$/.exec(t);
+        if (pm) {
+          const base = pm[1].trim();
+          if (base) items.push(base);
+          splitSmart(pm[2]).forEach((x) => items.push(x.trim()));
+        } else {
+          items.push(t);
+        }
+      }
+
+      // Normalize label e.g., "Backend (supporting experience)" -> "Backend"
+      const label = labelRaw.replace(/\s*\(.+?\)\s*$/, '').trim();
+      // Deduplicate while preserving order
+      const seen = new Set();
+      const uniq = items.filter((x) => {
+        const key = x.replace(/\s+/g, ' ').trim();
+        if (!key) return false;
+        if (seen.has(key.toLowerCase())) return false;
+        seen.add(key.toLowerCase());
+        return true;
+      });
+      skills.push({ label, items: uniq });
+    }
+    return skills;
+  }
+
+  const skills = parseSkills(md);
+
   // HTML template with modern, printable styling (A4)
   const html = `<!doctype html>
   <html lang="en">
@@ -95,15 +164,25 @@ async function main() {
           width: 100%;
           aspect-ratio: 1 / 1;
           object-fit: cover;
-          border-radius: 20px;
-          border: 1px solid var(--line);
-          box-shadow: 0 8px 24px rgba(2,6,23,0.08);
         }
-        .content { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 220px; gap: 20px; }
+        .content { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 240px; gap: 20px; }
         .main { padding-top: 12px; }
-        .aside { padding-top: 12px; }
+        .aside { padding-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+        .aside-section {
+          border-radius: 12px;
+          background: linear-gradient(#ffffff,#ffffff) padding-box,
+                      linear-gradient(120deg, rgba(14,165,233,0.6), rgba(124,58,237,0.6)) border-box;
+          border: 1px solid transparent;
+          box-shadow: 0 6px 18px rgba(2,6,23,0.05);
+          padding: 10px 12px;
+        }
+        .aside-title {
+          margin: 0 0 6px 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+        }
+        .chips { display: flex; flex-wrap: wrap; gap: 6px; }
         .chip {
-          display: inline-block; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--line); margin: 2px 4px 2px 0; color: var(--muted);
+          display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted);
+          background: rgba(2,6,23,0.02);
         }
         /* Markdown typography */
         .md h2 { font-size: 16px; margin: 14px 0 8px; letter-spacing: -0.01em; }
@@ -128,16 +207,18 @@ async function main() {
         <div class="content">
           <div class="main md">${htmlFromMd}</div>
           <aside class="aside">
-            <div class="section">
-              <span class="chip">React</span>
-              <span class="chip">TypeScript</span>
-              <span class="chip">Vite</span>
-              <span class="chip">Node.js</span>
-              <span class="chip">Redux</span>
-              <span class="chip">Tailwind</span>
-              <span class="chip">Jest</span>
-              <span class="chip">RTL</span>
-            </div>
+            ${skills
+              .map((group) => `
+                <section class="aside-section">
+                  <h4 class="aside-title">${group.label}</h4>
+                  <div class="chips">
+                    ${group.items
+                      .map((it) => `<span class="chip">${it.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</span>`) 
+                      .join('')}
+                  </div>
+                </section>
+              `)
+              .join('')}
           </aside>
         </div>
       </div>
