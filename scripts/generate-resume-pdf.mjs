@@ -173,7 +173,6 @@ async function main() {
           background: linear-gradient(#ffffff,#ffffff) padding-box,
                       linear-gradient(120deg, rgba(14,165,233,0.6), rgba(124,58,237,0.6)) border-box;
           border: 1px solid transparent;
-          box-shadow: 0 6px 18px rgba(2,6,23,0.05);
           padding: 10px 12px;
           break-inside: avoid;
         }
