@@ -167,14 +167,14 @@ async function main() {
         }
         .content { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 200px; gap: 18px; }
         .main { padding-top: 12px; }
-        .aside { padding-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+        .aside { display: flex; flex-direction: column; gap: 8px; }
         .aside-section {
           border-radius: 12px;
-          background: linear-gradient(#ffffff,#ffffff) padding-box,
-                      linear-gradient(120deg, rgba(14,165,233,0.6), rgba(124,58,237,0.6)) border-box;
-          border: 1px solid transparent;
+          border: 1px solid var(--line);
           padding: 10px 12px;
           break-inside: avoid;
+          margin: 1px auto;
+          display: block;
         }
         .aside-title {
           margin: 0 0 4px 0; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
