@@ -273,8 +273,8 @@ function svgPlaceholder(title) {
 const PROJECTS = [
   {
     title: 'Digital Arena – SaaS for Sports Broadcasting',
-    desc: 'Cloud-first live sports production platform. Spearheaded full-stack architecture, streaming pipelines, and multi-tenant SaaS delivery. Built with ReactJS, Vite, and fastify.',
-    tags: ['SaaS','ReactJS','Vite','fastify','Streaming'],
+    desc: 'Cloud-first live sports production platform. Spearheaded full-stack architecture, and multi-tenant SaaS delivery. Built with ReactJS, Vite, and fastify.',
+    tags: ['ReactJS','Typescript','SaaS','Vite','fastify','Docker'],
     demo: 'https://digital-arena.eu/',
     images: [
       '/images/digital-arena.png',
@@ -284,7 +284,7 @@ const PROJECTS = [
   {
     title: 'AlgoTrade — Proprietary Trading Backbone',
     desc: 'From-scratch backbone for research, backtesting, signal generation, order routing, and reporting. Automated scanning across stocks, crypto, FX, indices, and CFDs.',
-    tags: ['Python', 'Postgresql','Trading','Backtesting','Machine Learning','Automation'],
+    tags: ['Python', 'Postgresql','Trading','Backtesting','Machine Learning','Automation','Docker'],
     images: [
       '/images/trade1.png',
       '/images/trade2.png',

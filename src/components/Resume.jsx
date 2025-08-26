@@ -1,8 +1,7 @@
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import resumeMd from '../../resume.md?raw';
 
 const PrintStyles = createGlobalStyle`
   @media print {
@@ -133,6 +132,16 @@ const Sheet = styled.article`
 
 export default function Resume() {
   const sheetRef = useRef(null);
+  const [resumeMd, setResumeMd] = useState('');
+
+  useEffect(() => {
+    let active = true;
+    fetch('/files/resume.md')
+      .then((r) => (r.ok ? r.text() : Promise.reject(new Error('Failed to load resume.md'))))
+      .then((text) => { if (active) setResumeMd(text); })
+      .catch((err) => { console.error(err); });
+    return () => { active = false; };
+  }, []);
 
   const handlePrint = () => {
     // Print the page (CSS hides everything but the resume sheet)
@@ -150,7 +159,7 @@ export default function Resume() {
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 10v-4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M12 14V4" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><path d="M9 11l3 3 3-3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/><rect x="4" y="14" width="16" height="6" rx="2" stroke="currentColor" strokeWidth="1.6"/></svg>
             Download PDF
           </Button>
-          <LinkBtn href="/resume.md" target="_blank" rel="noopener">
+          <LinkBtn href="/files/resume.md" target="_blank" rel="noopener">            
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="currentColor" strokeWidth="1.5"/><path d="M14 3v6h6" stroke="currentColor" strokeWidth="1.5"/><path d="M8 13h8M8 17h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg>
             View Markdown
           </LinkBtn>

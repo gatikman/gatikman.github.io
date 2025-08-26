@@ -330,9 +330,10 @@ export default function Home() {
         <Tagline>@gatikman</Tagline>
         <Tagline>SaaS Entrepreneur · Software Developer · Algorithmic Trading</Tagline>
         <Profile>
-          I'm an accomplished software developer blending entrepreneurship, systems architecture,
-          and algorithmic trading. I craft high‑performance trading systems, lead technical operations,
-          and architect robust SaaS products—particularly in sports broadcasting and financial markets.
+          Strong background in building scalable, responsive, 
+          and user-friendly web applications in international environments. 
+          8+ years of hands-on frontend experience with React, TypeScript, 
+          and modern JavaScript frameworks.
         </Profile>
         <Buttons>
           <Button to="/resume" aria-label="View my resume">View Resume</Button>
