@@ -139,13 +139,13 @@ async function main() {
         }
         .sheet {
           display: grid;
-          grid-template-columns: 1fr 220px;
+          grid-template-columns: 1fr 200px;
           gap: 20px;
         }
         header {
           grid-column: 1 / -1;
           display: grid;
-          grid-template-columns: 1fr 220px;
+          grid-template-columns: 1fr 160px;
           gap: 20px;
           align-items: center;
           padding-bottom: 14px;
@@ -161,13 +161,13 @@ async function main() {
         }
         .subtitle { margin: 0; color: var(--sub); font-weight: 600; }
         .photo {
-          width: 100%;
-          aspect-ratio: 1 / 1;
+          width: 110px;
+          height: 110px;
           object-fit: cover;
         }
-        .content { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 240px; gap: 20px; }
+        .content { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 200px; gap: 18px; }
         .main { padding-top: 12px; }
-        .aside { padding-top: 12px; display: flex; flex-direction: column; gap: 10px; }
+        .aside { padding-top: 12px; display: flex; flex-direction: column; gap: 8px; }
         .aside-section {
           border-radius: 12px;
           background: linear-gradient(#ffffff,#ffffff) padding-box,
@@ -175,13 +175,14 @@ async function main() {
           border: 1px solid transparent;
           box-shadow: 0 6px 18px rgba(2,6,23,0.05);
           padding: 10px 12px;
+          break-inside: avoid;
         }
         .aside-title {
-          margin: 0 0 6px 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+          margin: 0 0 4px 0; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
         }
-        .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 4px; }
         .chip {
-          display: inline-block; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted);
+          display: inline-block; padding: 3px 8px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted);
           background: rgba(2,6,23,0.02);
         }
         /* Markdown typography */
