@@ -38,6 +38,11 @@ npm run build
 npm run preview
 ```
 
+### Generate PDF version of the CV
+```bash
+npm run cv:build
+```
+
 ---
 
 Replace placeholder content and images with your own information as needed.
