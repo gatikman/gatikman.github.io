@@ -278,7 +278,9 @@ const PROJECTS = [
     demo: 'https://digital-arena.eu/',
     images: [
       '/images/digital-arena.png',
-      '/images/digital-arena2.png'
+      '/images/digital-arena2.png',
+      '/images/digital-arena3.png',
+      '/images/digital-arena4.png'
     ],
   },
   {
