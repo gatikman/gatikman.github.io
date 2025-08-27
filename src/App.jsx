@@ -9,6 +9,11 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import NotFound from './components/NotFound';
 
+const pulse = keyframes`
+  0%, 100% { opacity: 0.55; filter: blur(30px); }
+  50% { opacity: 0.85; filter: blur(36px); }
+`;
+
 // Global styles for accessibility and modern look
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,6 +22,34 @@ const GlobalStyle = createGlobalStyle`
     background: #f8f9fa;
     color: #222;
     min-height: 100vh;
+    background: radial-gradient(1200px 500px at 10% 0%, #eef3ff 0%, rgba(238,243,255,0) 50%),
+              radial-gradient(800px 400px at 100% 10%, #e6f7f2 0%, rgba(230,247,242,0) 50%),
+              #f8fafc;
+    
+    /* soft patterned grid */
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: radial-gradient(1200px 600px at -10% -20%, rgba(99,102,241,0.14), transparent 60%),
+                  radial-gradient(900px 600px at 120% -10%, rgba(45,212,191,0.18), transparent 55%);
+      z-index: -1;
+    }
+
+    /* spotlight glow */
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      width: 900px;
+      height: 900px;
+      transform: translateX(-50%);
+      background: radial-gradient(circle at 50% 30%, rgba(14,165,233,0.16), rgba(124,58,237,0.12) 40%, transparent 65%);
+      pointer-events: none;
+      animation: ${pulse} 9s ease-in-out infinite;
+      z-index: -1;
+    }
   }
   a {
     color: inherit;
@@ -215,23 +248,23 @@ function App() {
             <span />
           </Burger>
           <Menu id="site-menu" data-open={menuOpen}>
-            <MenuItem>
-        <MenuLink to="/" end onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'Home' }); }}>Home</MenuLink>
-            </MenuItem>
-            <MenuItem>
-        <MenuLink to="/about" onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'About' }); }}>About Me</MenuLink>
-            </MenuItem>
-            <MenuItem>
-        <MenuLink to="/resume" onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'Resume' }); }}>Resume</MenuLink>
-            </MenuItem>
-            <MenuItem>
-        <MenuLink to="/projects" onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'Projects' }); }}>Projects</MenuLink>
-            </MenuItem>
-      </Menu>
+                <MenuItem>
+            <MenuLink to="/" end onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'Home' }); }}>Home</MenuLink>
+                </MenuItem>
+                <MenuItem>
+            <MenuLink to="/about" onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'About' }); }}>About Me</MenuLink>
+                </MenuItem>
+                <MenuItem>
+            <MenuLink to="/resume" onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'Resume' }); }}>Resume</MenuLink>
+                </MenuItem>
+                <MenuItem>
+            <MenuLink to="/projects" onClick={() => { setMenuOpen(false); trackEvent('nav_click', { label: 'Projects' }); }}>Projects</MenuLink>
+                </MenuItem>
+          </Menu>
         </NavBar>
         <MobileBackdrop data-open={menuOpen} onClick={() => setMenuOpen(false)} />
-    </Header>
-    <RouteChangeTracker />
+      </Header>
+      <RouteChangeTracker />
       <Main>
         <Routes>
           <Route path="/" element={<Home />} />
