@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 // Use the real photo placed in /public/images/photo.png
-const PROFILE_PHOTO = '/images/photo.png';
+const PROFILE_PHOTO = '/images/memoji.GIF';
 
 const float = keyframes`
   0% { transform: translateY(0px); }
@@ -126,13 +126,14 @@ const PhotoFrame = styled.div`
 `;
 
 const Photo = styled.img`
+  max-width: 100%;
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 12px;
   display: block;
-  background: #fff;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7);
+  background: #000;
 `;
 
 const Eyebrow = styled.span`
@@ -328,7 +329,7 @@ export default function Home() {
         </Eyebrow>
         <Name id="home-heading">Alejandro Gatica</Name>
         <Tagline>@gatikman</Tagline>
-        <Tagline>SaaS Entrepreneur · Software Developer · Algorithmic Trading</Tagline>
+        <Tagline>SaaS Entrepreneur · Frontend Developer · Algorithmic Trading</Tagline>
         <Profile>
           Strong background in building scalable, responsive, 
           and user-friendly web applications in international environments. 
@@ -378,7 +379,7 @@ export default function Home() {
         <PhotoFrame aria-hidden="true">
           <Photo
             src={PROFILE_PHOTO}
-            alt="Alejandro Gatica professional portrait"
+            alt="Gatikman memoji"
             loading="lazy"
             onError={e => { e.currentTarget.style.visibility = 'hidden'; }}
           />
