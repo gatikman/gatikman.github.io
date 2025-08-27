@@ -334,7 +334,7 @@ export default function Home() {
           Strong background in building scalable, responsive, 
           and user-friendly web applications in international environments. 
           8+ years of hands-on frontend experience with React, TypeScript, 
-          and modern JavaScript frameworks.
+          and modern JavaScript frameworks (Total 15+ years working on web development).
         </Profile>
         <Buttons>
           <Button to="/resume" aria-label="View my resume">View Resume</Button>
