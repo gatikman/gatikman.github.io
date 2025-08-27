@@ -1,6 +1,6 @@
 # Frontend Developer (React + TypeScript)
 
-Strong background in building scalable, responsive, and user-friendly web applications in international environments. 8+ years of hands-on frontend experience with React, TypeScript, and modern JavaScript frameworks (15+ years working on web development).
+Strong background in building scalable, responsive, and user-friendly web applications in international environments. 8+ years of hands-on frontend experience with React, TypeScript, and modern JavaScript frameworks (Total 15+ years working on web development).
 
 ---
 
