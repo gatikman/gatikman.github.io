@@ -34,40 +34,12 @@ const Wrapper = styled.section`
   align-items: center;
   justify-content: center;
   min-height: 72vh;
-  background: radial-gradient(1200px 500px at 10% 0%, #eef3ff 0%, rgba(238,243,255,0) 50%),
-              radial-gradient(800px 400px at 100% 10%, #e6f7f2 0%, rgba(230,247,242,0) 50%),
-              #f8fafc;
+  
   border-radius: 1.25rem;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.06);
   padding: 2.5rem 1.25rem 2.75rem;
   text-align: center;
   overflow: hidden;
   isolation: isolate;
-
-  /* soft patterned grid */
-  &::before {
-    content: '';
-    position: absolute;
-    inset: -2px;
-    background: radial-gradient(1200px 600px at -10% -20%, rgba(99,102,241,0.14), transparent 60%),
-                radial-gradient(900px 600px at 120% -10%, rgba(45,212,191,0.18), transparent 55%);
-    z-index: -1;
-  }
-
-  /* spotlight glow */
-  &::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 10%;
-    width: 900px;
-    height: 900px;
-    transform: translateX(-50%);
-    background: radial-gradient(circle at 50% 30%, rgba(14,165,233,0.16), rgba(124,58,237,0.12) 40%, transparent 65%);
-    pointer-events: none;
-    animation: ${pulse} 9s ease-in-out infinite;
-    z-index: -1;
-  }
 
   @media (min-width: 880px) {
     grid-template-columns: 1.1fr 0.9fr;

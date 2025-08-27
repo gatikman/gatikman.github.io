@@ -10,8 +10,6 @@ const Page = styled.section`
   position: relative;
   display: grid;
   gap: 1.25rem;
-  background: radial-gradient(1000px 400px at 0% -10%, #eef3ff 0%, rgba(238,243,255,0) 55%),
-              radial-gradient(800px 500px at 110% 0%, #e6f7f2 0%, rgba(230,247,242,0) 55%);
   border-radius: 1.25rem;
   padding: 1rem;
   isolation: isolate;
@@ -25,7 +23,6 @@ const Page = styled.section`
     width: 900px;
     height: 900px;
     transform: translateX(-50%);
-    background: radial-gradient(circle at 50% 30%, rgba(14,165,233,0.16), rgba(124,58,237,0.12) 40%, transparent 65%);
     pointer-events: none;
     animation: ${pulse} 9s ease-in-out infinite;
     z-index: -1;
@@ -90,13 +87,13 @@ const Card = styled.article`
   border: 1px solid #eef2f7;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.01);
   display: grid;
   grid-template-rows: auto 1fr;
   backdrop-filter: blur(6px) saturate(120%);
   -webkit-backdrop-filter: blur(6px) saturate(120%);
   transition: transform 0.15s ease, box-shadow 0.2s ease;
-  &:hover { transform: translateY(-3px); box-shadow: 0 16px 32px rgba(15,23,42,0.12); }
+  &:hover { transform: translateY(-3px); box-shadow: 0 10px 10px rgba(15,23,42,0.12); }
 `;
 
 const Media = styled.div`
