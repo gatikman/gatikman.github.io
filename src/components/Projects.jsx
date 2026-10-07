@@ -281,16 +281,18 @@ const PROJECTS = [
     ],
   },
   {
-    title: 'AlgoTrade — Proprietary Trading Backbone',
-    desc: 'From-scratch backbone for research, backtesting, signal generation, order routing, and reporting. Automated scanning across stocks, crypto, FX, indices, and CFDs.',
+    title: 'The Trading desk',
+    desc: 'Build, validate, simulate and run systematic trading strategies with operational visibility across every signal, order and position.',
     tags: ['Python', 'Postgresql','Trading','Backtesting','Machine Learning','Automation','Docker'],
+    demo: 'https://www.thetradingdesk.app/',
     images: [
       '/images/trade1.png',
       '/images/trade2.png',
+      '/images/trade3.png',
     ],
   },
   {
-    title: 'cbschatbot – AI Chatbot for CBS',
+    title: 'cbschatbot - AI Chatbot for CBS',
     desc: 'Notebooks and reusable components for signal research, parameter sweeps, and walk-forward tests.',
     tags: ['Python','Backtesting','Research', 'OpenSource', 'MetaAI'],
     github: 'https://github.com/cbscode/cbschatbot',
@@ -404,12 +406,12 @@ export default function Projects() {
                 {p.github ? (
                   <LinkBtn href={p.github} target="_blank" rel="noopener">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.6-3.37-1.19-3.37-1.19-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.02 1.53 1.02 .9 1.52 2.36 1.08 2.94.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.02-2.68-.1-.25-.44-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.21 2.4.11 2.65.64.7 1.02 1.59 1.02 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.67.92.67 1.86 0 1.34-.01 2.42-.01 2.75 0 .27.18.58.69.48A10 10 0 0 0 12 2Z" stroke="currentColor" strokeWidth="1.2"/></svg>
-                    Source
+                    Source Code
                   </LinkBtn>
                 ) : (
                   <DisabledBtn aria-disabled="true" title="Source is private">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 10V8a6 6 0 1 1 12 0v2" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/><rect x="4" y="10" width="16" height="10" rx="2" stroke="currentColor" strokeWidth="1.6"/></svg>
-                    Private
+                    Source Code
                   </DisabledBtn>
                 )}
               </Actions>

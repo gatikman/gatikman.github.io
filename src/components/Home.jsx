@@ -330,7 +330,7 @@ export default function Home() {
         </Stats>
 
         <BadgeCloud aria-label="Technologies">
-          {['Python','JavaScript','React','Next.js','Vite','fastify','SQL','AWS','Algorithmic Trading']
+          {['Python', 'Asyncio', 'JavaScript','React','Next.js','Vite','fastify','SQL','AWS','Algorithmic Trading']
             .map(tag => (<Badge key={tag}>{tag}</Badge>))}
         </BadgeCloud>
 
@@ -339,7 +339,10 @@ export default function Home() {
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4.5A2.5 2.5 0 0 1 4.5 2h15A2.5 2.5 0 0 1 22 4.5v15A2.5 2.5 0 0 1 19.5 22h-15A2.5 2.5 0 0 1 2 19.5v-15Zm2.75.75 7.25 6.5 7.25-6.5" stroke="#0f172a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
           </SocialLink>
           <SocialLink href="https://www.linkedin.com/in/alejandro-gatica/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 8.25A6.25 6.25 0 0 1 22.75 14.5v5.25a1 1 0 0 1-1 1h-4.5a1 1 0 0 1-1-1V14.5a2.25 2.25 0 0 0-4.5 0v5.25a1 1 0 0 1-1 1h-4.5a1 1 0 0 1-1-1V14.5A6.25 6.25 0 0 1 7.5 8.25h9Z" stroke="#0f172a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="7" r="3" stroke="#0f172a" strokeWidth="1.5"/></svg>
+            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 3.5h14A1.5 1.5 0 0 1 20.5 5v14a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 19V5A1.5 1.5 0 0 1 5 3.5Z" stroke="#0f172a" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M7.5 10.5V16.5M7.5 7.5v.01M11 16.5v-3.25a2.75 2.75 0 0 1 5.5 0v3.25M11 10.5v6" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>          
           </SocialLink>
           <SocialLink href="https://gatikman.com/" target="_blank" rel="noopener" aria-label="Website">
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="#0f172a" strokeWidth="1.5"/><path d="M2 12h20M12 2c2.5 2.5 4 6.5 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6.5-4-10s1.5-7.5 4-10Z" stroke="#0f172a" strokeWidth="1.5"/></svg>
